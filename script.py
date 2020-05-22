@@ -2,9 +2,7 @@ import requests
 import pandas as pd
 import arrow
 import datetime
-import pandas as pd
 import numpy as np
-
 
 def get_quote_data(symbol='AAPL', data_range='7d', data_interval='1m'):
     res = requests.get(
@@ -22,7 +20,6 @@ def get_quote_data(symbol='AAPL', data_range='7d', data_interval='1m'):
     df.to_csv('out.csv')
 
     return df
-
 
 data = get_quote_data('AAPL', '7d', '1m')
 print(data)
